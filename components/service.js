@@ -33,8 +33,8 @@ const Service = () => {
     const [selectedService, setSelectedService] = useState(null);
 
     return (
-        <div className='h-screen'>
-            <h1 className='text-center text-5xl font-serif mb-10'>Local Services</h1>
+        <div className='h-'>
+            <h1 className='text-center text-5xl font-serif mb-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-[#EBA1FF]'>Local Services</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 p-4'>
                 {services.map((service) => (
                     <div
