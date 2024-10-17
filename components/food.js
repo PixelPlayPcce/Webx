@@ -4,9 +4,9 @@ import Image from "next/image";
 const Food = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
-    "/adi.png",
-    "/food2.png",
-    "/food3.png",
+    "/dish1.jpeg",
+    "/dish1.jpeg",
+   "/dish1.jpeg",
     // Add more image paths as needed
   ];
 
@@ -19,9 +19,9 @@ const Food = () => {
   }, []);
 
   return (
-    <div className='h-screen bg-red-400 '>
-      <h1 className='text-center text-5xl font-serif p-5 mb-10'>Local Cuisines</h1>
-     <div className='bg-blue-200 flex items-center justify-center h-1/2'>
+    <div className='h-screen  '>
+      <h1 className='text-center text-5xl font-serif  mb-10'>Local Cuisines</h1>
+     <div className=' flex items-center justify-center p-4 h-80 mb-32'>
       <div className='relative w-full max-w-3xl h-80'>
         {images.map((src, index) => {
           const position = (index - currentIndex + images.length) % images.length;
@@ -36,19 +36,30 @@ const Food = () => {
           
           return (
             <div key={src} className={className}>
-              <Image src={src} alt={`food-${index}`} width={400} height={400} className="rounded-lg shadow-lg" />
-              <h1 className='bg-white'>thali</h1>
+              <Image src={src} alt={`food-${index}`} width={400} height={400} className="rounded-t-3xl shadow-lg" />
+              <h1 className='bg-green-950 text-white text-2xl font-thin'>thali</h1>
             </div>
           );
         })}
       </div>
       </div>
-      <h1 className='font-serif text-2xl'> information</h1>
-      <div className='grid grid-cols-3 w-[85%] space-x-6'>
+      <div className=' h- flex items-center justify-center'>
+      
+      <div className='grid grid-cols-3 w-[90%] space-x-6'>
        
-       <div className='bg-blue-200'>1</div>
-         <div className='bg-blue-200'>2</div>
-            <div className='bg-blue-200'>3</div>
+       <div className='bg-slate-200  rounded-lg p-2'>
+        <h1 className='text-xl'>A quintessential Goan meal, the fish thali offers a rich tapestry of flavors that highlight the bounty of the sea. With perfectly grilled or fried fish as the star of the plate, the thali is accompanied by a variety of traditional curries, rice, pickles, and vegetables, offering a true taste of coastal cuisine. Each component is prepared using local spices and coconut, giving it a signature Goan flair, making this a must-try meal for seafood lovers.
+        </h1>
+       </div>
+       <div className='bg-slate-200  rounded-lg p-2'>
+        <h1 className='text-xl'>A quintessential Goan meal, the fish thali offers a rich tapestry of flavors that highlight the bounty of the sea. With perfectly grilled or fried fish as the star of the plate, the thali is accompanied by a variety of traditional curries, rice, pickles, and vegetables, offering a true taste of coastal cuisine. Each component is prepared using local spices and coconut, giving it a signature Goan flair, making this a must-try meal for seafood lovers.
+        </h1>
+       </div>
+       <div className='bg-slate-200  rounded-lg p-2'>
+        <h1 className='text-xl'>A quintessential Goan meal, the fish thali offers a rich tapestry of flavors that highlight the bounty of the sea. With perfectly grilled or fried fish as the star of the plate, the thali is accompanied by a variety of traditional curries, rice, pickles, and vegetables, offering a true taste of coastal cuisine. Each component is prepared using local spices and coconut, giving it a signature Goan flair, making this a must-try meal for seafood lovers.
+        </h1>
+       </div>
+      </div>
       </div>
     </div>
   );
