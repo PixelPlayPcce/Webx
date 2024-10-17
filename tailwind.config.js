@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: '390px', // Add custom sm screen size
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
